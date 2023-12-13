@@ -1,6 +1,6 @@
 let boxes = document.querySelectorAll(".box");
 let resetBtn = document.querySelector("#reset-btn");
-let turnO = true;
+let turnO=true;
 let audioElement = new Audio('1.mp3');
 let newGameBtn = document.querySelector("#new-btn")
 let msgContainer = document.querySelector(".msg-Container")
@@ -18,7 +18,7 @@ let winPatterns = [
 
 ];
 const reset = () => {
-    turnO = true
+    
     msgContainer.classList.add("hide");
     audioElement.pause();
     enableBoxes()
@@ -47,7 +47,7 @@ boxes.forEach((box) => {
             }
         }
         console.log(count)
-        if (count === 9 ) {
+        if (count === 9) {
             msg.innerText = `Draw`
             msgContainer.classList.remove("hide");
             
