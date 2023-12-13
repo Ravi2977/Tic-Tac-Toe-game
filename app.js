@@ -37,7 +37,7 @@ boxes.forEach((box) => {
             turnO = true;
         }
         box.disabled = true;
-        checkWinner();
+        
         for (let i = 0; i < boxes.length; i++) {
             if (boxes[i].innerText === "O") {
                 boxes[i].style.color = 'green'
@@ -46,12 +46,13 @@ boxes.forEach((box) => {
                 boxes[i].style.color = 'red'
             }
         }
-        console.log(count)
+        
         if (count === 9) {
             msg.innerText = `Draw`
             msgContainer.classList.remove("hide");
             
         }
+        checkWinner();
     })
 })
 
@@ -72,6 +73,7 @@ const showWinner = (winner) => {
     disableBoxes();
     audioElement.play();
 }
+
 const checkWinner = () => {
     for (pattern of winPatterns) {
 
