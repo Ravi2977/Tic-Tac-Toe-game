@@ -98,3 +98,8 @@ for (let i = 0; i < boxes.length; i++) {
 }
 newGameBtn.addEventListener("click", reset);
 resetBtn.addEventListener("click", reset)
+let audioClick = new Audio("click.mp3")
+function handleOnClick() {
+ 
+    audioClick.play();
+}
